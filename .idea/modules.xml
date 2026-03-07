@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/PatternProg/PatternProg.iml" filepath="$PROJECT_DIR$/PatternProg/PatternProg.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Telusko Java Practice.iml" filepath="$PROJECT_DIR$/.idea/Telusko Java Practice.iml" />
     </modules>
   </component>
