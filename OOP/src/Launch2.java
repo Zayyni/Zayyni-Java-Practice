@@ -16,5 +16,11 @@ public class Launch2 {
        Calculator c = new Calculator();
        c.add();
 
+       for (int i=0;i<4;i++){
+           System.out.println(i);
+       }
+
     }
+
+
 }
