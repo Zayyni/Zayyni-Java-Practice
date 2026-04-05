@@ -2,6 +2,7 @@ class Employe {
     private int id;
     private String name;
 
+    //setter
     void setId(int i){
         id=i;
     }
@@ -10,6 +11,7 @@ class Employe {
         name=n;
     }
 
+    //getter
     int getId(){
         return id;
     }
