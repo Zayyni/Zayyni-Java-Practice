@@ -9,6 +9,12 @@ class Dog{
         this.color = color;
     }
 
+    Dog (){
+        cost = 0;
+        name = null;
+        color = null;
+    }
+
     public int getCost() {
         return cost;
     }
@@ -40,6 +46,11 @@ public class LaunchConstructor {
         System.out.println(d.getCost());
         System.out.println(d.getName());
         System.out.println(d.getColor());
+
+        Dog d2= new Dog();
+        System.out.println(d2.getCost());
+        System.out.println(d2.getName());
+        System.out.println(d2.getColor());
 
     }
 }
