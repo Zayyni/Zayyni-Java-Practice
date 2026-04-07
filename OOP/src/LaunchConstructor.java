@@ -47,6 +47,7 @@ public class LaunchConstructor {
         System.out.println(d.getName());
         System.out.println(d.getColor());
 
+        //This is using default constructor
         Dog d2= new Dog();
         System.out.println(d2.getCost());
         System.out.println(d2.getName());
