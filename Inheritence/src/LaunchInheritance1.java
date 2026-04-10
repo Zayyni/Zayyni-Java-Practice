@@ -13,7 +13,7 @@ public class LaunchInheritance1 {
     public static void main(String[] args) {
 //        Zayyni z=new Zayyni();
 //        z.display();
-        Alien a=new Alien();
+        Alien1 a=new Alien1();
         a.display();
     }
 }
