@@ -1,4 +1,5 @@
-class AeroPlane{
+class AeroPlane //extend Object class (default nature of java)
+{
     void fly(){
         System.out.println("AeroPlane flies");
     }
@@ -21,6 +22,7 @@ public class LaunchInheritance2 {
         CargoPlane cp = new CargoPlane();
         cp.fly();
         cp.landing();
+        cp.getClass();
 //        PassengerPlane pp = new PassengerPlane();
 //        pp.fly();
 //        pp.landing();
