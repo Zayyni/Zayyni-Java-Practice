@@ -1,5 +1,5 @@
 class Zayyni1{
-     String name = "Zayyni";
+    private String name = "Zayyni";
 
     void display(){
         System.out.println("Name is " + name);
@@ -8,9 +8,9 @@ class Zayyni1{
 class Alien1 extends Zayyni1{
 
 
-    void display2() {
-        name="Alien";
-    }
+//    void display2() {
+//        name="Alien";
+//    }
 }
 public class LaunchInheritance3 {
     public static void main(String[] args) {
