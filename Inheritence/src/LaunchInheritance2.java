@@ -32,10 +32,10 @@ public class LaunchInheritance2 {
         cp.fly();
         cp.landing();
         cp.getClass();
-        AeroPlane pp = new PassengerPlane();
+        AeroPlane pp = new PassengerPlane();//Upcasting (creating parent type reference for child type object)
         pp.fly();
         pp.landing();
-        ((PassengerPlane)pp).takeOff();
+        ((PassengerPlane)pp).takeOff();//DownCasting(temporarily changing parent type reference to child type to access specialized behavior present in the child class)
 //        CommercialPlane cp2 = new CommercialPlane();
 //        cp2.fly();
 //        cp2.landing();
