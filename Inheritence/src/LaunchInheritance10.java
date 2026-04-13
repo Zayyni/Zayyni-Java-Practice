@@ -5,6 +5,9 @@ class Animal{
 }
 class Tiger extends Animal{
 
+    void eat(){
+        System.out.println("Tigers are required to eat");
+    }
 }
 public class LaunchInheritance10 {
     public static void main(String[] args) {
