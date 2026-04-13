@@ -6,6 +6,10 @@ class Animal{
    void sleep(){
        System.out.println("Animals are required to sleep");
    }
+
+   public void walk(){
+       System.out.println("Animals are required to walk");
+   }
 }
 class Tiger extends Animal{
 
@@ -19,6 +23,11 @@ class Tiger extends Animal{
 
     protected void sleep(){ //'we can increase the visibility while overriding the inherited method
         System.out.println("Tigers are required to sleep");
+    }
+
+    public int walk(){// the primivte return types cannot be changed
+        System.out.println("Tigers are required to walk");
+        return 10;
     }
 
 }
