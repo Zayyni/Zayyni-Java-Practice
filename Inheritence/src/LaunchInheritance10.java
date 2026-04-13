@@ -5,7 +5,7 @@ class FigherPlane extends Plane{
 
 }
 class Animal{
-   public void eat(){
+   public void eat(String foodType){
        System.out.println("Animals are required to eat");
    }
 
@@ -25,9 +25,14 @@ class Tiger extends Animal{
 //        System.out.println("Tigers are required to eat");
 //    }
 
-    public void eat(){
+    public void eat(String foodType){ // this is acting as method overriding
         System.out.println("Tigers are required to eat");
     }
+
+    public void eat(){  //this is acting like speacilized method
+        System.out.println("Tigers are required to eat");
+    }//Such methods which are only in the child class and not in the parent class
+
 
     protected void sleep(){ //'we can increase the visibility while overriding the inherited method
         System.out.println("Tigers are required to sleep");
