@@ -10,7 +10,7 @@ class Demo4{
 }
 class Demo5 extends Demo4{
 
-    public static void display(){
+    public static void display(){ // method hiding as we cannot override the static method
         a=10;
         System.out.println(a + "child class display");
     }
@@ -18,9 +18,11 @@ class Demo5 extends Demo4{
 
 public class LaunchInheritance11 {
     public static void main(String[] args) {
-        Demo5 d = new Demo5();
+        Demo4 d = new Demo5();
         d.display();
 
+        Demo4.display();
+        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^");
         Demo5.display();
     }
 }
