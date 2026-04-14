@@ -7,13 +7,13 @@
 
 class Plane1{ //final class cannot be inherited or cannot be Parent of any child class
 
-    final void fly(){
+    final void fly(){ // final methods do participate in inheritance
         System.out.println("Planes are required to fly");
     }
 }
 class FighterPlane1 extends Plane1{
 
-//    public void fly(){
+//    public void fly(){ //cannot override the final method in child class
 //        System.out.println("FighterPlane 1 is flying");
 //    }
 
