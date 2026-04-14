@@ -7,9 +7,12 @@
 
 class Plane1{ //final class cannot be inherited or cannot be Parent of any child class
 
-    final int age =10;
+    public final Plane1(){
 
-    final void fly(){ // final methods do participate in inheritance
+    }
+    final static int age =10;
+
+    final static void fly(){ // final methods do participate in inheritance
 //        age=20;
         System.out.println("Planes are required to fly");
     }
