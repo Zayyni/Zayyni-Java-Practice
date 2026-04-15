@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Inheritence/Inheritence.iml" filepath="$PROJECT_DIR$/Inheritence/Inheritence.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/PatternProg/PatternProg.iml" filepath="$PROJECT_DIR$/PatternProg/PatternProg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Polymorphism/Polymorphism.iml" filepath="$PROJECT_DIR$/Polymorphism/Polymorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/Static/Static.iml" filepath="$PROJECT_DIR$/Static/Static.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Telusko Java Practice.iml" filepath="$PROJECT_DIR$/.idea/Telusko Java Practice.iml" />
     </modules>

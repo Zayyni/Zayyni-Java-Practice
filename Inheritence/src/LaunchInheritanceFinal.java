@@ -7,9 +7,9 @@
 
 class Plane1{ //final class cannot be inherited or cannot be Parent of any child class
 
-    public final Plane1(){
-
-    }
+//    public final Plane1(){
+//
+//    }
     final static int age =10;
 
     final static void fly(){ // final methods do participate in inheritance
