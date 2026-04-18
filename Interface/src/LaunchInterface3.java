@@ -3,6 +3,10 @@ interface Zayyni{
     default void display(){
         System.out.println("Zayyni working on method body in the interface class");
     }
+
+    static void announcement(){
+        System.out.println("we can have static method in interface class but it must not be abstract");
+    }
 }
 class Alien implements Zayyni{
     public void show(){
