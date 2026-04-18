@@ -18,5 +18,7 @@ public class LaunchInterface3 {
         Alien obj = new Alien();
         obj.show();
         obj.display();
+
+        Zayyni.announcement();
     }
 }
