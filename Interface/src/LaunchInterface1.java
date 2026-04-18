@@ -9,8 +9,13 @@ interface Calc2{
     int div(int a , int b);
 }
 
+class Calcultor{
+    public void display(){
+        System.out.println("Calculator class");
+    }
+}
 
-class MyCalc1 implements Calc,Calc2{
+class MyCalc1 extends Calcultor implements Calc,Calc2{
 
     public void add(int a, int b){
         int result = a+b;
