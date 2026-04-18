@@ -7,6 +7,7 @@
 
 interface Demo1{
     void display();
+    float pi = 3.14f; // public static final
 }
 interface Demo2 extends Demo1{
     void show();
@@ -23,6 +24,7 @@ public class LaunchInterface2 {
     public static void main(String[] args) {
        Demo1 demo1= new Alpha();
        demo1.display();
+//       Demo1.pi=3.4f; // by default all the variables are final and static in interface
 
         Demo2 demo2= new Alpha();
         demo2.display();
