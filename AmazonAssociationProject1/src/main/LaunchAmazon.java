@@ -1,14 +1,20 @@
 package main;
 
+import services.BlueDart;
 import services.FedEx;
+import services.FirstFlight;
 
 public class LaunchAmazon {
     public static void main(String[] args) {
 
-        Amazon amazon = new Amazon();
+        //constructor Injection
+        Amazon amazon = new Amazon(new FirstFlight());
 //        FedEx fedEx = new FedEx();
 //        amazon.setService(fedEx);
-        amazon.setService(new FedEx());
+        //setter Injection
+//        amazon.setService(new BlueDart());
+//       amazon.setService(new FedEx());
+//        amazon.setService(new FirstFlight());
 
 
 
