@@ -9,7 +9,10 @@
 //        System.out.println("in B Show method");
 //    }
 //}
-
+/**
+ * This is multiline comment for generating java doc
+ *
+ */
 class Person{
 
 //    int age;
@@ -18,7 +21,7 @@ class Person{
         System.out.println("Zayyni");
     }
 
-    static class Phone{
+     class Phone{
 //        int price;
 //        String model;
 
@@ -30,7 +33,7 @@ class Person{
 
 }
 
-public class Demo {
+public class DemoLambda {
     public static void main(String[] args) {
 
 //        A a = new A();
@@ -41,7 +44,7 @@ public class Demo {
         p.printName();
 //        p.age = 18;
 //        p.name = "John Smith";
-        Person.Phone phone = new Person.Phone();
+        Person.Phone phone = p.new Phone();
         phone.details();
 
     }
