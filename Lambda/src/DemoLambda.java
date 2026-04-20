@@ -40,9 +40,24 @@ public class DemoLambda {
             public void show(){
                 System.out.println("in New Show method");
             }
+
+            public void getData(){
+                System.out.println("in getData method");
+            }
         };
 //        A a = new B();
         a.show();
+
+        new A() //Anonymous Inner class
+        {
+            public void show(){
+                System.out.println("in New Show method");
+            }
+
+            public void getData(){
+                System.out.println("in getData method");
+            }
+        }.getData();
 
 //        Person p = new Person();
 //        p.printName();
