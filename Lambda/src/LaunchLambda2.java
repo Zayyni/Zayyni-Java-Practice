@@ -6,6 +6,9 @@ interface Animal1 {
 @FunctionalInterface // this annotation does not allow more than one method
 interface Animal2 {
     void getData();
+    default void eat() {
+        System.out.println("in getData method");
+    }
 }
 public class LaunchLambda2 {
     public static void main(String[] args) {
@@ -24,6 +27,7 @@ public class LaunchLambda2 {
         };
 
         animal2.getData();
+        animal2.eat();
 
     }
 }
