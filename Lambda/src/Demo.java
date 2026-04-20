@@ -18,7 +18,7 @@ class Person{
         System.out.println("Zayyni");
     }
 
-    class Phone{
+    static class Phone{
 //        int price;
 //        String model;
 
@@ -41,6 +41,8 @@ public class Demo {
         p.printName();
 //        p.age = 18;
 //        p.name = "John Smith";
+        Person.Phone phone = new Person.Phone();
+        phone.details();
 
     }
 }
