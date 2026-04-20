@@ -2,7 +2,8 @@ interface Animal1 {
     void eat();
 }
 
-
+// interface -> normal, SAM -> functional interface (an interface with only one method) , Marker
+@FunctionalInterface // this annotation does not allow more than one method
 interface Animal2 {
     void getData();
 }
