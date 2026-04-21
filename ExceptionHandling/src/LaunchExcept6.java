@@ -17,6 +17,9 @@ class Alpha2{
             System.out.println("Please Enter a positive number");
             throw e;
         }
+        finally {
+            System.out.println("Alpha Connection Terminated");
+        }
 
         System.out.println("Alpha Connection Terminated");
     }
