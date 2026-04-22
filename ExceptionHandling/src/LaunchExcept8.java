@@ -1,8 +1,9 @@
 class Alien{
     public void alpha(){
-
+        beta();
     };
     public void beta(){
+        alpha();
 
     }
 }
