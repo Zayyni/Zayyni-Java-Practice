@@ -60,11 +60,11 @@ class Child3 extends Parent{
         System.out.println("Child3 work");
     }
 }
-class Child4 extends Parent{
-    public void work() throws Exception {
-        System.out.println("Child4 work");
-    }
-}
+//class Child4 extends Parent{
+//    public void work() throws Exception {
+//        System.out.println("Child4 work");
+//    }
+//}
 
 public class LaunchExcept10 {
     public static void main(String[] args) {
