@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 
 class InvalidCustomerException extends RuntimeException {
+    public InvalidCustomerException(String message) {
+        super(message);
+    }
 
 }
 class Atm{
@@ -26,10 +29,11 @@ class Atm{
 //            System.out.println("Invalid account");
 //            input();
 //            verify();
-//            InvalidCustomerException e = new InvalidCustomerException();
-//            throw e;
+            InvalidCustomerException e = new InvalidCustomerException("INVALID CREDENTIALS");
+            System.out.println(e.getMessage());
+            throw e;
 
-            throw new InvalidCustomerException();//another way to define the exception
+//            throw new InvalidCustomerException("Invalid Credentials !");//another way to define the exception
         }
     }
 
@@ -45,12 +49,14 @@ class Bank{
         }
         catch(InvalidCustomerException e){
             //System.out.println(e);
+            System.out.println("Try again!");
             try {
                 atm1.input();
                 atm1.verify();
             }
             catch(InvalidCustomerException e1){
                 //System.out.println(e);
+                System.out.println("Try again!");
                 try {
                     atm1.input();
                     atm1.verify();
