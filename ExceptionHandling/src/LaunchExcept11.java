@@ -19,7 +19,7 @@ class Atm{
         pinNo = sc.nextInt();
     }
 
-    public void verify(){
+    public void verify() throws InvalidCustomerException {
         if(acc==accountNo && pin==pinNo){
             System.out.println("Proceed to collect cash");
         }else{
@@ -39,8 +39,27 @@ class Atm{
 class Bank{
     public void initiate(){
         Atm atm1 = new Atm();
-        atm1.input();
-        atm1.verify();
+        try {
+            atm1.input();
+            atm1.verify();
+        }
+        catch(InvalidCustomerException e){
+            //System.out.println(e);
+            try {
+                atm1.input();
+                atm1.verify();
+            }
+            catch(InvalidCustomerException e1){
+                //System.out.println(e);
+                try {
+                    atm1.input();
+                    atm1.verify();
+                }
+                catch(InvalidCustomerException e2){
+                    System.out.println("Your account number is now terminated so try again after sometime");
+                }
+            }
+        }
     }
 }
 
