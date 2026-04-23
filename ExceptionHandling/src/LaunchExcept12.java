@@ -58,5 +58,7 @@ class Licence{
 public class LaunchExcept12 {
     public static void main(String[] args) {
 
+        Licence licence = new Licence();
+        licence.application();
     }
 }
