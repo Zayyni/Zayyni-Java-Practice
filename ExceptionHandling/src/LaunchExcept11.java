@@ -26,8 +26,10 @@ class Atm{
 //            System.out.println("Invalid account");
 //            input();
 //            verify();
-            InvalidCustomerException e = new InvalidCustomerException();
-            throw e;
+//            InvalidCustomerException e = new InvalidCustomerException();
+//            throw e;
+
+            throw new InvalidCustomerException();//another way to define the exception
         }
     }
 
