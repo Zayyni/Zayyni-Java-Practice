@@ -28,8 +28,19 @@ public class LaunchArray6
         System.out.println("**************************************");
 
         int array[] = {3,5,3,7,8};
+        for(int elem: array)
+        {
+            System.out.print(elem + " ");
+        }
+        System.out.println();
+        System.out.println("***************************************");
         Arrays.sort(array);
-        System.out.println(array);
+        for(int elem: array)
+        {
+            System.out.print(elem + " ");
+        }
+
+//        System.out.println(Arrays.toString(array));
 
 
     }
