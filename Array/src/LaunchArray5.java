@@ -21,6 +21,5 @@ public class LaunchArray5 {
         int arr3[][] ={{2,6,8,8},{5,6,9}};
         System.out.println(arr3[1][1]);
 
-        
     }
 }
