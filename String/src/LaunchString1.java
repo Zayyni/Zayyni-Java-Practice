@@ -14,6 +14,7 @@ public class LaunchString1
         String str2 = "zayyni";
         System.out.println(str1 == str2); //false
         System.out.println(str1.equals(str2)); //false
+        System.out.println(str1.equalsIgnoreCase(str2)); // true
 
 
     }
