@@ -31,7 +31,13 @@ public class LaunchString2 {
 //        System.out.println(str2);
 //        System.out.println(str3);
 
-        String str1 = "Zayyni" + "Java" + "SpringBoot" + "MicroServices";
-        System.out.println(str1);
+//        String str1 = "Zayyni" + "Java" + "SpringBoot" + "MicroServices";
+//        System.out.println(str1);
+
+//        String s = "SpringBoot " + 2026; // SpringBoot 2026
+//        System.out.println(s);
+
+        String s = 20+26 +" SpringBoot";
+        System.out.println(s); //46 SpringBoot
     }
 }
