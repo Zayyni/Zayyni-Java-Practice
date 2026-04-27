@@ -14,6 +14,8 @@ public class LaunchString4 {
         System.out.println(s1);
         System.out.println(s1.length());
         System.out.println(s1.trim());
+        System.out.println(s1.stripTrailing());
+        System.out.println(s1.stripLeading());
 
     }
 }
