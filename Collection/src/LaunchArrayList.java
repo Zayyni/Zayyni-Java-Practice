@@ -17,6 +17,8 @@ public class LaunchArrayList {
         al2.add(20);
         al2.add(0,45);
         al2.addAll(al);
+        System.out.println(al2.contains("Zayyni"));
+        System.out.println(al2.containsAll(al));
 
         System.out.println(al2);
     }
