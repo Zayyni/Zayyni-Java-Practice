@@ -3,7 +3,7 @@ import java.util.PriorityQueue;
 public class LaunchPriorityQueue
 {
     public static void main(String[] args) {
-        PriorityQueue pq = new PriorityQueue();
+        PriorityQueue pq = new PriorityQueue(); //it follows min heap data structure
         pq.add(100);
         pq.add(80);
         pq.add(90);
