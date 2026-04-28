@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Abstraction/Abstraction.iml" filepath="$PROJECT_DIR$/Abstraction/Abstraction.iml" />
       <module fileurl="file://$PROJECT_DIR$/AmazonAssociationProject1/AmazonAssociationProject1.iml" filepath="$PROJECT_DIR$/AmazonAssociationProject1/AmazonAssociationProject1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Collection/Collection.iml" filepath="$PROJECT_DIR$/Collection/Collection.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExceptionHandling/ExceptionHandling.iml" filepath="$PROJECT_DIR$/ExceptionHandling/ExceptionHandling.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inheritence/Inheritence.iml" filepath="$PROJECT_DIR$/Inheritence/Inheritence.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interface/Interface.iml" filepath="$PROJECT_DIR$/Interface/Interface.iml" />
