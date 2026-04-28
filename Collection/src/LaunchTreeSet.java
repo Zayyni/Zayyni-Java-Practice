@@ -3,7 +3,7 @@ import java.util.TreeSet;
 public class LaunchTreeSet
 {
     public static void main(String[] args) {
-        TreeSet ts = new TreeSet();
+        TreeSet ts = new TreeSet(); // stores data in sorted order and internally uses Binary tree data structure
         ts.add(100);
         ts.add(80);
         ts.add(90);
