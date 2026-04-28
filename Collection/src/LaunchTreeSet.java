@@ -3,7 +3,8 @@ import java.util.TreeSet;
 public class LaunchTreeSet
 {
     public static void main(String[] args) {
-        TreeSet ts = new TreeSet(); // stores data in sorted order and internally uses Binary tree data structure as it follows inOrder traversal as there are three type of traversals
+        TreeSet ts = new TreeSet(); // stores data in sorted order and internally uses Binary tree data structure as
+        // it follows inOrder traversal as there are three type of traversals RULE LVR left value Right in the tree and LNR
         ts.add(100);
         ts.add(80);
         ts.add(90);
