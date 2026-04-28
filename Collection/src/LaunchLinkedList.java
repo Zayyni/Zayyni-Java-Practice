@@ -19,6 +19,7 @@ public class LaunchLinkedList
         System.out.println(ll1);
         ll1.offerFirst("Spring");
         System.out.println(ll1);
+        System.out.println(ll1.peek());
 
 
 
