@@ -19,7 +19,10 @@ public class LaunchLinkedList
         System.out.println(ll1);
         ll1.offerFirst("Spring");
         System.out.println(ll1);
-        System.out.println(ll1.peek());
+        System.out.println(ll1.peek());//peek gives the first element as a copy
+        System.out.println(ll1);
+        System.out.println(ll1.poll()); // poll method will remove the first element and give us
+        System.out.println(ll1);
 
 
 
