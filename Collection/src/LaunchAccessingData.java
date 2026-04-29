@@ -37,6 +37,7 @@ public class LaunchAccessingData
         {
             System.out.println(itr.next());
             al.add(44);
+            
         }
     }
 }
