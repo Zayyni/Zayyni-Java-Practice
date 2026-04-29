@@ -15,5 +15,10 @@ public class LaunchTreeSet
         ts.add(20);
         ts.add(123);
         System.out.println(ts);
+
+        System.out.println(ts.ceiling(50)); // ceiling gives the element nearest to the element we are searching
+        // if it is found then it will return that value else nearest to that element
+        System.out.println(ts.higher(60)); // it will not check any thing it wil just give the higher value
+
     }
 }
