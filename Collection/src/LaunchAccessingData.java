@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class LaunchAccessingData
 {
@@ -31,5 +32,11 @@ public class LaunchAccessingData
 //            al.add(12); // loops are not recommend as they are not suitable for concurrent changes
 //
 //        }
+        Iterator itr= al.iterator();
+        while (itr.hasNext())
+        {
+            System.out.println(itr.next());
+            al.add(44);
+        }
     }
 }
