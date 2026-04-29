@@ -23,5 +23,8 @@ public class LaunchTreeSet
         System.out.println(ts.floor(60)); //60 // floor gives the element nearest to the element we are searching
         // if it is found then it will return that value else lower nearest to that element
         System.out.println(ts.lower(60)); // 40 //it will not check anything it wil just give the lower value
+
+        System.out.println(ts.headSet(60)); // it will print elements before the 60 and skip the headset element
+        System.out.println(ts.tailSet(60)); // it will start from the fromElement till the end
     }
 }
