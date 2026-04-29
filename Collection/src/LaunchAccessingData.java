@@ -23,5 +23,13 @@ public class LaunchAccessingData
 //        {
 //            System.out.println(ob);
 //        }
+
+//        for (int i = 0; i < al.size(); i++)
+//        {
+//            Integer data = (Integer) al.get(i);
+//            System.out.println(data);
+//            al.add(12); // loops are not recommend as they are not suitable for concurrent changes
+//
+//        }
     }
 }
