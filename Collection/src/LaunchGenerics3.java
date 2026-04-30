@@ -43,7 +43,7 @@ public class LaunchGenerics3
         hlist3=slist3;
 //        hlist3=elist1; // compile time error
 //        hlist3=olist1; // compile time error as Object is parent of human
-        
+
 
 
 
