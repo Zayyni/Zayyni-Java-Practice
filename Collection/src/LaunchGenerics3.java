@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 class Human{
     int age;
@@ -32,22 +33,35 @@ public class LaunchGenerics3
 
 //        hlist1=slist1; //compile time error
 
-        ArrayList<?> hlist1 = new ArrayList<>(); //? unknown type --> wildcard
-        ArrayList<Students> slist1 = new ArrayList<>();
-        hlist1=slist1; // it allowed as it is unknown
+//        ArrayList<?> hlist1 = new ArrayList<>(); //? unknown type --> wildcard
+//        ArrayList<Students> slist1 = new ArrayList<>();
+//        hlist1=slist1; // it allowed as it is unknown
 
-        ArrayList<? extends Human> hlist3 = new ArrayList<>(); //upperbound like either Human type or Child of any human
-        ArrayList<Students> slist3 = new ArrayList<>();
-        ArrayList<Employees> elist1 = new ArrayList<>();
-        ArrayList<Object> olist1 = new ArrayList<>();
-        hlist3=slist3;
+//        ArrayList<? extends Human> hlist3 = new ArrayList<>(); //upperbound like either Human type or Child of any human
+//        ArrayList<Students> slist3 = new ArrayList<>();
+//        ArrayList<Employees> elist1 = new ArrayList<>();
+//        ArrayList<Object> olist1 = new ArrayList<>();
+//        hlist3=slist3;
 //        hlist3=elist1; // compile time error
 //        hlist3=olist1; // compile time error as Object is parent of human
 
 
+        ArrayList<? super Human> hlist3 = new ArrayList<>(); //lowerbound --> either human or parent of human
+        ArrayList<Students> slist3 = new ArrayList<>();
+        ArrayList<Employees> elist1 = new ArrayList<>();
+        ArrayList<Object> olist1 = new ArrayList<>();
+
+//        hlist3=elist1;// compile time error --> not parent of human or human
+//        hlist3=elist1;//compile time error --> not parent of human or human
+//        hlist3=olist1; //allowed as parent of human
 
 
-
-
+    }
+    public static void invockDisplay(List<? extends Human> list)
+    {
+     for(Human h:list){
+         System.out.println(h);
+//         h.display();
+     }
     }
 }
