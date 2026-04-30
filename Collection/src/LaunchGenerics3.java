@@ -46,16 +46,28 @@ public class LaunchGenerics3
 //        hlist3=olist1; // compile time error as Object is parent of human
 
 
-        ArrayList<? super Human> hlist3 = new ArrayList<>(); //lowerbound --> either human or parent of human
-        ArrayList<Students> slist3 = new ArrayList<>();
-        ArrayList<Employees> elist1 = new ArrayList<>();
-        ArrayList<Object> olist1 = new ArrayList<>();
+//        ArrayList<? super Human> hlist3 = new ArrayList<>(); //lowerbound --> either human or parent of human
+//        ArrayList<Students> slist3 = new ArrayList<>();
+//        ArrayList<Employees> elist1 = new ArrayList<>();
+//        ArrayList<Object> olist1 = new ArrayList<>();
 
 //        hlist3=elist1;// compile time error --> not parent of human or human
 //        hlist3=elist1;//compile time error --> not parent of human or human
 //        hlist3=olist1; //allowed as parent of human
 
 
+//        ArrayList<Human> hlist = new ArrayList<>();
+//        hlist.add(new Human());
+//        hlist.add(new Human());
+//        hlist.add(new Human());
+//        invockDisplay(hlist);
+
+
+        ArrayList<Students> slist = new ArrayList<>();
+        slist.add(new Students());
+        slist.add(new Students());
+        slist.add(new Students());
+        invockDisplay(slist);
     }
     public static void invockDisplay(List<? extends Human> list)
     {
