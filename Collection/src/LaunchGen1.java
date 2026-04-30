@@ -1,4 +1,24 @@
 import java.util.ArrayList;
+class Employee{
+    private Integer id;
+    private String name;
+    private String city;
+
+    public Employee(Integer id, String name, String city) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
+}
 
 public class LaunchGen1
 {
@@ -37,6 +57,32 @@ public class LaunchGen1
         for (String str1 : list1) {
             System.out.println(str1);
         }
+
+        System.out.println("***********************************");
+
+
+        ArrayList<Employee> list2 = new ArrayList<>();
+        list2.add(new Employee(1, "Zayyni", "Lhr"));
+        list2.add(new Employee(2, "Zya", "Lhr"));
+        list2.add(new Employee(3, "Xohaib", "Khi"));
+
+        for (Employee employee : list2) {
+            System.out.println(employee);
+        }
+
+        System.out.println("***********************************");
+
+//        ArrayList<int> e = new ArrayList<int>(); //primitive is not allowed
+
+//        ArrayList<Object> list3 = new ArrayList<Integer>(); //it is also not allowed like child on one side and parent on other side
+
+        ArrayList<Integer> list4 = new ArrayList<>();
+        list4.add(1);
+        list4.add(2);
+        list4.add(3);
+        list4.add(4);
+        System.out.println(list4);
+
 
 
 
