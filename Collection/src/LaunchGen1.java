@@ -26,8 +26,18 @@ public class LaunchGen1
         list.add(11);
         list.add(26.5);
 
-        String info = (String) list.get(2);
+        String info = (String) list.get(0);
         System.out.println(info);   // ClassCastException
+
+        ArrayList<String> list1 = new ArrayList<>();
+        list1.add("Zayyni");
+        list1.add("World");
+        list1.add("Java");
+        list1.add("Python");
+        for (String str1 : list1) {
+            System.out.println(str1);
+        }
+
 
 
     }
