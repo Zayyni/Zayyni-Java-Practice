@@ -29,7 +29,7 @@ public class LaunchGen1
         String info = (String) list.get(0);
         System.out.println(info);   // ClassCastException
 
-        ArrayList<String> list1 = new ArrayList<>();
+        ArrayList<String> list1 = new ArrayList<>(); //generics
         list1.add("Zayyni");
         list1.add("World");
         list1.add("Java");
