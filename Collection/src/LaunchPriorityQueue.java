@@ -13,6 +13,7 @@ public class LaunchPriorityQueue
         pq.add(30);
         pq.add(20);
         pq.add(10);
+//        pq.add(null);//not allowed null pointer exception
 
         System.out.println(pq);
     }
