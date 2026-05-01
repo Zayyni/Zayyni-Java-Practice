@@ -23,6 +23,7 @@ public class LaunchHS
         hs.add(75);
         hs.add(125);
         hs.add(175);
+        hs.add(null);//not allowed null pointer exception
         System.out.println(hs);
 
     }
