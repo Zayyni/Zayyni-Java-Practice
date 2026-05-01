@@ -22,6 +22,7 @@ public class LaunchLinkedList
         System.out.println(ll1.peek());//peek gives the first element as a copy
         System.out.println(ll1);
         System.out.println(ll1.poll()); // poll method will remove the first element and give us
+        ll1.add(null);
         System.out.println(ll1);
 
 
