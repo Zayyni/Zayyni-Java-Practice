@@ -14,6 +14,7 @@ public class LaunchTreeSet
         ts.add(10);
         ts.add(20);
         ts.add(123);
+//        ts.add(null);//not allowed null pointer exception
         System.out.println(ts);
 
         System.out.println(ts.ceiling(50)); //60  // ceiling gives the element nearest to the element we are searching
