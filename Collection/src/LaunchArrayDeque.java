@@ -8,6 +8,7 @@ public class LaunchArrayDeque
         ad.add(20);
         ad.add(30);
         ad.add(40);
+//        ad.add(null);//not allowed null pointer exception
         System.out.println(ad);
     }
 }
