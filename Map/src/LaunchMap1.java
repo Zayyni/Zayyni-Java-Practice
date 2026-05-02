@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.LinkedHashMap;
 
 class Zayyni{
     private Integer id;
@@ -50,13 +52,50 @@ public class LaunchMap1
        hm1.put(5, "C++");
        System.out.println(hm1);
 
+       System.out.println("*****************************************");
+
        Zayyni z = new Zayyni();
        z.setId(1);
        z.setCourseName("Java");
 
-       HashMap hm2 = new HashMap();
-       hm2.put(1, "Java");
-       hm2.put(z, "Python"); // key-value
+//       HashMap hm2 = new HashMap(); //No order of insertion is maintained
+//       hm2.put(1, "Java");
+//       hm2.put(z, "Python"); // key-value
+//
+//        hm2.put(2, "MicroServices");
+////        hm2.put(3, "MicroServices"); //key must be unique and value need not to be unique
+//        hm2.put(3, "MicroServices");
+//        hm2.put(null, "C#"); //key can be null only with respect to HashMap
+//        hm2.put(4, null);// value can also be null
+//
+//        System.out.println(hm2);
 
+//        LinkedHashMap lhm2 = new LinkedHashMap(); //No order of insertion is maintained also
+//        // linkedHashMap() is a child class of HashMap();
+//        lhm2.put(1, "Java");
+//        lhm2.put(z, "Python"); // key-value
+//
+//        lhm2.put(2, "MicroServices");
+////        hm2.put(3, "MicroServices"); //key must be unique and value need not to be unique
+//        lhm2.put(3, "MicroServices");
+//        lhm2.put(null, "C#"); //key can be null only with respect to HashMap
+//        lhm2.put(4, null);// value can also be null
+//
+//        System.out.println(lhm2);
+
+//        HashMap<Integer,String> hm2 = new HashMap<>(); //key must be of integer type
+//        hm2.put(1, "Java"); //Entry
+////        hm2.put(z, "Python"); // key-value
+//
+//        hm2.put(2, "MicroServices");
+//
+//        System.out.println(hm2);
+
+        Hashtable ht = new Hashtable();
+        ht.put(1, "Java");
+        ht.put(2, "Python");
+//        ht.put(null, "SpringBoot"); // null key is not allowed in Hashtable
+//        ht.put(3, null); //null value is not allowed in Hashtable
+        System.out.println(ht);
     }
 }
