@@ -1,7 +1,4 @@
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 interface Alpha{
     interface Beta{
@@ -43,7 +40,9 @@ public class LaunchMap2
         Set entry=map.entrySet();
         Iterator entries=entry.iterator();
         while (entries.hasNext()) {
-            System.out.println(entries.next());
+//            System.out.println(entries.next());
+            Map.Entry pair= (Map.Entry) entries.next();
+            System.out.println("Key : " + pair.getKey()+ " Value : "+pair.getValue());
         }
 
 
