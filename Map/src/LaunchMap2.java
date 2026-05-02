@@ -38,6 +38,14 @@ public class LaunchMap2
             System.out.println(key.next());
         }
 
+        System.out.println("***************************");
+
+        Set entry=map.entrySet();
+        Iterator entries=entry.iterator();
+        while (entries.hasNext()) {
+            System.out.println(entries.next());
+        }
+
 
     }
 }
