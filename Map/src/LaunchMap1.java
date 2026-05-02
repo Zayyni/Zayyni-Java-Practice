@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.LinkedHashMap;
+import java.util.*;
 
 class Zayyni{
     private Integer id;
@@ -91,11 +88,24 @@ public class LaunchMap1
 //
 //        System.out.println(hm2);
 
-        Hashtable ht = new Hashtable();
-        ht.put(1, "Java");
-        ht.put(2, "Python");
-//        ht.put(null, "SpringBoot"); // null key is not allowed in Hashtable
-//        ht.put(3, null); //null value is not allowed in Hashtable
-        System.out.println(ht);
+//        Hashtable ht = new Hashtable();
+//        ht.put(1, "Java");
+//        ht.put(2, "Python");
+////        ht.put(null, "SpringBoot"); // null key is not allowed in Hashtable
+////        ht.put(3, null); //null value is not allowed in Hashtable
+//        System.out.println(ht);
+
+
+        TreeMap tm = new TreeMap(); // it return list in the sorted order on the base or keys
+        tm.put(2, "Java");
+        tm.put(1, "Python");
+        tm.put(3, "C#");
+//        tm.put(null, "PHP");// key cannot be null
+        tm.put(4,null);
+
+        System.out.println(tm);
+
+
+
     }
 }
