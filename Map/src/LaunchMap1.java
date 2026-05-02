@@ -101,7 +101,7 @@ public class LaunchMap1
         tm.put(1, "Python");
         tm.put(3, "C#");
 //        tm.put(null, "PHP");// key cannot be null
-        tm.put(4,null);
+        tm.put(4,null);// value can be null
 
         System.out.println(tm);
 
