@@ -14,7 +14,7 @@ public class LaunchEnum1 {
         Week[] weekArr =Week.values();
         for (Week w : weekArr)
         {
-            System.out.println(w);
+            System.out.println(w.ordinal() + " -> " + w);
         }
 
     }
