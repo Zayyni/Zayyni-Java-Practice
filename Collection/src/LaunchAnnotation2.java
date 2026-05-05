@@ -1,7 +1,4 @@
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE,ElementType.CONSTRUCTOR,ElementType.METHOD})
@@ -36,5 +33,14 @@ public class LaunchAnnotation2
         BabarAzam babarAzam=new BabarAzam();
         babarAzam.setInnings(300);
         System.out.println(babarAzam.getInnings());
+
+        System.out.println("****************************");
+         Class<? extends BabarAzam> c=babarAzam.getClass();
+         Annotation an=c.getAnnotation(CricketPlayer.class);
+         CricketPlayer cp = (CricketPlayer)an;
+         int age = cp.age();
+         String country = cp.country();
+
+         System.out.println("Information of attributes of annotations are "+age +" and "+country);
     }
 }
