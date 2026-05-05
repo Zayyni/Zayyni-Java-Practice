@@ -32,6 +32,11 @@ public class LaunchEnum2
 
         Result result=Result.PASS;
         result.setMarks(5);
+        int marks1=result.getMarks();
+        System.out.println(marks1);
         System.out.println(result);
+
+        int marks = Result.FAIL.getMarks();
+        System.out.println(marks);
     }
 }
