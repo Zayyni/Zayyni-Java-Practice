@@ -11,5 +11,11 @@ public class LaunchEnum1 {
         int index = Week.THU.ordinal(); // it gives the index of the element and starts index from zero
         System.out.println(index);
 
+        Week[] weekArr =Week.values();
+        for (Week w : weekArr)
+        {
+            System.out.println(w);
+        }
+
     }
 }
