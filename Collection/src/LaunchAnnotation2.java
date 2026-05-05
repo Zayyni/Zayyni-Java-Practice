@@ -4,7 +4,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target({ElementType.TYPE,ElementType.CONSTRUCTOR,ElementType.METHOD})
 @interface CricketPlayer
 {
     String country() default "PAKISTAN";
