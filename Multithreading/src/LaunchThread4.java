@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Alpha1 extends Thread {
+class Alpha2 implements Runnable {
 
     @Override
     public void run() {
@@ -18,7 +18,7 @@ class Alpha1 extends Thread {
     }
 
 }
-class Beta1 extends Thread {
+class Beta2 implements Runnable {
     @Override
     public void run(){
         try {
@@ -37,7 +37,7 @@ class Beta1 extends Thread {
         System.out.println("Printing Activity Terminated..............");
     }
 }
-class Gamma1 extends Thread {
+class Gamma2 implements Runnable {
 
     @Override
     public void run(){
@@ -59,20 +59,28 @@ class Gamma1 extends Thread {
     }
 }
 
-public class LaunchThread3
+public class LaunchThread4
 {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Application Started................");
 
-        Alpha1 a=new Alpha1();
-        Beta1 b=new Beta1();
-        Gamma1 g=new Gamma1();
-        a.start();
-        b.start();
-        g.start();
-        a.join();
-        b.join();
-        g.join();
+        Alpha2 a=new Alpha2();
+        Beta2 b=new Beta2();
+        Gamma2 g=new Gamma2();
+
+        Thread t1=new Thread(a);
+        Thread t2=new Thread(b);
+        Thread t3=new Thread(g);
+        System.out.println(t1.isAlive());//false
+        System.out.println(t2.isAlive());//false
+        System.out.println(t3.isAlive());//false
+
+        t1.start();
+        t2.start();
+        t3.start();
+        System.out.println(t1.isAlive());//true
+        System.out.println(t2.isAlive());//true
+        System.out.println(t3.isAlive());//true
 
 
         System.out.println("Application Terminated..............");
