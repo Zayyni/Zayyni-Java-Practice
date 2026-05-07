@@ -1,15 +1,17 @@
 class MyCar implements Runnable
 {
     @Override
-    synchronized public void run(){
+     public void run(){
         try {
             System.out.println(Thread.currentThread().getName() + " has entered the parking lot");
             Thread.sleep(4000);
-            System.out.println(Thread.currentThread().getName() + " has entered into the car");
-            Thread.sleep(4000);
-            System.out.println(Thread.currentThread().getName() + " has started to drive the car");
-            Thread.sleep(4000);
-            System.out.println(Thread.currentThread().getName() + " has came back and now into the parking lot");
+            synchronized(this) {
+                System.out.println(Thread.currentThread().getName() + " has entered into the car");
+                Thread.sleep(4000);
+                System.out.println(Thread.currentThread().getName() + " has started to drive the car");
+                Thread.sleep(4000);
+                System.out.println(Thread.currentThread().getName() + " has came back and now into the parking lot");
+            }
         }catch (Exception e) {
             e.printStackTrace();
         }
