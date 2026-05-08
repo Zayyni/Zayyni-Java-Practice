@@ -40,6 +40,7 @@ class Queue
     synchronized public void produce(int i) {
         try {
             if (flag == true) {
+                System.out.println(Thread.currentThread().getName() + ": Waiting for data");
                 wait();
             }
             else {
@@ -57,6 +58,7 @@ class Queue
     {
         try {
             if (flag == false) {
+                System.out.println(Thread.currentThread().getName() + ": Waiting for data");    
                 wait();
             }
             else {
