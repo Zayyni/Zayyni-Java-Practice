@@ -4,6 +4,10 @@ public class LaunchThreadDebugging2 implements Runnable
         System.out.println("Main thread");
         Thread thread = new Thread(new LaunchThreadDebugging2());
         thread.start();
+
+        Runnable r = ()->System.out.println("Task of thread 2");
+        Thread thread2 = new Thread(r);
+        thread2.start();
     }
 
     @Override
