@@ -7,15 +7,15 @@ public class MCBBank {
     public MCBBank(int accountBalance) {
         this.accountBalance = accountBalance;
     }
-    public void withdraw(int amount) {
+    synchronized public void withdraw(int amount) {
         accountBalance -= amount;
     }
 
-    public void deposit(int amount) {
+    synchronized public void deposit(int amount) {
         accountBalance += amount;
     }
 
-    public void getAccountBalance() {
-         System.out.println("Your account balance is" +accountBalance);
+    synchronized public void getAccountBalance() {
+         System.out.println("Your account balance is " +accountBalance);
     }
 }

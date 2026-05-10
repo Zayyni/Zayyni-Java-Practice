@@ -9,6 +9,9 @@ public class LaunchObjectLevelLocking {
         jazzCash.setName("Jazz Cash Thread");
         EasyPaisa easyPaisa = new EasyPaisa(bank);
         easyPaisa.setName("EasyPaisa Thread");
-        
+
+        atm.start();
+        easyPaisa.start();
+        jazzCash.start();
     }
 }
