@@ -1,4 +1,4 @@
-package classlevellocking.objectlevellocking;
+package classlevellocking;
 
 public class MCBBank {
 

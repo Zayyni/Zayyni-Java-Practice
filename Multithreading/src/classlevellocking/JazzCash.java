@@ -1,4 +1,4 @@
-package classlevellocking.objectlevellocking;
+package classlevellocking;
 
 public class JazzCash extends Thread
 {

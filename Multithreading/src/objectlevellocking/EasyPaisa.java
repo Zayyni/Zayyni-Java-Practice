@@ -1,5 +1,7 @@
 package objectlevellocking;
 
+import objectlevellocking.MCBBank;
+
 public class EasyPaisa extends Thread
 {
 
