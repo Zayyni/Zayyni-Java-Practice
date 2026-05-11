@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class LaunchStream
@@ -31,10 +29,36 @@ public class LaunchStream
                 .map(n->n*2)
                 .forEach(System.out::println);
 
-        String n = "ZAYYNI";
+//        String n = "ZAYYNI";
 //        int lenght = n.toLowerCase()
 //                .toUpperCase()
 //                .concat("java")
 //                .length();
+
+
+
+
+
+        List<String> list1 = new ArrayList<>();
+        list1.add("Zayyni");
+        list1.add("Java");
+        list1.add("Python");
+
+        System.out.println(list1);
+
+       Set<String> set= list1.stream()
+                .collect(Collectors.toSet());
+
+
+       List<String> list2=list1.stream()
+               .sorted().collect(Collectors.toList());
+       System.out.println(list2);
+
+
+
+
+
+
+
     }
 }
