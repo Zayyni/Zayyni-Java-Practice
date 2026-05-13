@@ -2,9 +2,19 @@ package main;
 
 class Alpha{
 
+    public void alpha(){
+        //statements
+        //logic
+
+    }
+
 }
 class Beta{
 
+    public void beta(){
+        Alpha beta = new Alpha();
+        beta.alpha();
+    }
 }
 
 public class LaunchApp {
