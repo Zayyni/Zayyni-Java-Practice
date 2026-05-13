@@ -4,7 +4,7 @@ class Alpha{
 
 }
 class Beta{
-    
+
 }
 
 public class LaunchApp {
