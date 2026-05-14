@@ -10,6 +10,12 @@ public class LaunchMain {
         //1. BeanFactory
         //2. ApplicationContext
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-
+        Zayyni z = context.getBean(Zayyni.class);
+        Boolean status= z.buyTheCourse(888.5);
+        if (status) {
+            System.out.println("The course has been purchased");
+        }else {
+            System.out.println("The course has not been purchased");
+        }
     }
 }

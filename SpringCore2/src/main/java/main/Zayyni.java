@@ -7,6 +7,7 @@ public class Zayyni {
     private ICourse course;
 
     public Zayyni(ICourse course) {
+        System.out.println("Zayyni constructor");
         this.course = course;
     }
 
