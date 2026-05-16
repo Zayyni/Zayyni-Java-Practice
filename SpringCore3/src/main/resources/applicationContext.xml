@@ -7,8 +7,9 @@
     <bean id="java" class="services.Java"></bean>
     <bean id="springBoot" class="services.SpringBoot"></bean>
     <bean id="zayyni" class="main.Zayyni">
-<!--        <property ref="java" name="course"></property>   this setter injection-->
-        <constructor-arg ref="java" name="course"></constructor-arg>
+        <property ref="java" name="course"></property>
+<!--        the above is this setter injection-->
+<!--        <constructor-arg ref="java" name="course"></constructor-arg>-->
     </bean>
 
 </beans>
