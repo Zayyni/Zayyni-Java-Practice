@@ -7,8 +7,12 @@ import sevices.Employee;
 public class LaunchApp {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Employee  emp1=context.getBean(Employee.class);
+        Employee  emp1=context.getBean("emp1",Employee.class);
         System.out.println(emp1);
         System.out.println(emp1.employeeTask());
+
+        Employee emp2=context.getBean("emp2",Employee.class);
+        System.out.println(emp2);
+        System.out.println(emp2.employeeTask());
     }
 }
