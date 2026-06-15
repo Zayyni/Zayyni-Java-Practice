@@ -26,4 +26,14 @@ public class VaccineService implements IVaccineService {
     public Iterable<Vaccine> registerMultipleVaccineInfo(Iterable<Vaccine> vaccine) {
         return iVaccineRepo.saveAll(vaccine);
     }
+
+    @Override
+    public Long vaccineCount() {
+        return iVaccineRepo.count();
+    }
+
+    @Override
+    public boolean checkVaccineAvailability(Integer vaccineId) {
+        return iVaccineRepo.existsById(vaccineId);
+    }
 }

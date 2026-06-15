@@ -7,4 +7,8 @@ public interface IVaccineService {
     public String registerVaccineInfo(Vaccine vaccine);
 
     public Iterable<Vaccine> registerMultipleVaccineInfo( Iterable<Vaccine> vaccine);
+
+    public Long vaccineCount();
+
+    public boolean checkVaccineAvailability(Integer vaccineId);
 }
