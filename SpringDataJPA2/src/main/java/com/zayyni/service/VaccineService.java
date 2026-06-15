@@ -36,4 +36,8 @@ public class VaccineService implements IVaccineService {
     public boolean checkVaccineAvailability(Integer vaccineId) {
         return iVaccineRepo.existsById(vaccineId);
     }
+
+    public Iterable<Vaccine> getVaccineList() {
+        return iVaccineRepo.findAll();
+    }
 }

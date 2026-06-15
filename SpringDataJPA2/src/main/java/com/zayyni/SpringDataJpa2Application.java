@@ -27,13 +27,14 @@ public class SpringDataJpa2Application {
 //        vaccines.add(vaccine3);
 //        service.registerMultipleVaccineInfo(vaccines).forEach(System.out::println);
 
-        Long count = service.vaccineCount();
-        System.out.println("Number of vaccines available : "+count);
+//        Long count = service.vaccineCount();
+//        System.out.println("Number of vaccines available : "+count);
+//
+//        boolean status = service.checkVaccineAvailability(2);
+//        System.out.println("Vaccine availability : "+status);
 
-        boolean status = service.checkVaccineAvailability(2);
-        System.out.println("Vaccine availability : "+status);
 
-
+        service.getVaccineList().forEach(System.out::println);
     }
 
 }

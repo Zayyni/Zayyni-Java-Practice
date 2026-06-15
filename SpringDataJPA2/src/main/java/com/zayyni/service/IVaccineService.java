@@ -11,4 +11,6 @@ public interface IVaccineService {
     public Long vaccineCount();
 
     public boolean checkVaccineAvailability(Integer vaccineId);
+
+    public Iterable<Vaccine> getVaccineList();
 }
