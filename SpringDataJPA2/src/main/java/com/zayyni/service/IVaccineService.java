@@ -19,4 +19,6 @@ public interface IVaccineService {
     public Iterable<Vaccine> getAllVaccineList(Iterable<Integer>ids);
 
     public Optional<Vaccine> getVaccineById(Integer id);
+
+    public String deleteVaccineById(Integer id);
 }

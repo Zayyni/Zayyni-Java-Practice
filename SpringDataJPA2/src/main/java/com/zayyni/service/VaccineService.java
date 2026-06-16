@@ -53,4 +53,22 @@ public class VaccineService implements IVaccineService {
         return iVaccineRepo.findById(id);
     }
 
+    @Override
+    public String deleteVaccineById(Integer id) {
+        Optional<Vaccine> optional=iVaccineRepo.findById(id);
+        if (optional.isPresent()) {
+            iVaccineRepo.deleteById(id);
+            return "Vaccine Deleted Successfully with ID: " + id;
+        }
+        return "Vaccine Not Found";
+
+//        Boolean status=iVaccineRepo.existsById(id);
+//        if (status) {
+//            iVaccineRepo.deleteById(id);
+//            return "Vaccine Deleted Successfully with ID: " + id;
+//        }
+//        return "Vaccine Not Found";
+
+
+    }
 }
