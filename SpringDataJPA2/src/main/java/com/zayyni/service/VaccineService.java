@@ -40,4 +40,9 @@ public class VaccineService implements IVaccineService {
     public Iterable<Vaccine> getVaccineList() {
         return iVaccineRepo.findAll();
     }
+
+    @Override
+    public Iterable<Vaccine> getAllVaccineList(Iterable<Integer> ids) {
+        return iVaccineRepo.findAllById(ids);
+    }
 }

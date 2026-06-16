@@ -13,4 +13,6 @@ public interface IVaccineService {
     public boolean checkVaccineAvailability(Integer vaccineId);
 
     public Iterable<Vaccine> getVaccineList();
+
+    public Iterable<Vaccine> getAllVaccineList(Iterable<Integer>ids);
 }

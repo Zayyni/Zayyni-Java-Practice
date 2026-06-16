@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
@@ -34,7 +35,10 @@ public class SpringDataJpa2Application {
 //        System.out.println("Vaccine availability : "+status);
 
 
-        service.getVaccineList().forEach(System.out::println);
+//        service.getVaccineList().forEach(System.out::println);
+
+        List<Integer> vaccineIds= Arrays.asList(1,2,3,4);
+        service.getAllVaccineList(vaccineIds).forEach(System.out::println);
     }
 
 }
