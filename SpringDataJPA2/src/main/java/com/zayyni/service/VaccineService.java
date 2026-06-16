@@ -5,6 +5,7 @@ import com.zayyni.repo.IVaccineRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -70,5 +71,30 @@ public class VaccineService implements IVaccineService {
 //        return "Vaccine Not Found";
 
 
+    }
+
+    @Override
+    public String deleteVaccineByVaccine(Vaccine obj) {
+        Integer id=obj.getId();
+        Optional<Vaccine> optional=iVaccineRepo.findById(id);
+        if (optional.isPresent()) {
+            iVaccineRepo.deleteById(id);
+            return "Vaccine Deleted Successfully with ID: " + id;
+        }
+        return "Vaccine Not Found";
+    }
+
+    @Override
+    public String removeAllVaccines(List<Integer> ids) {
+        List<Vaccine> vaccines= (List<Vaccine>) iVaccineRepo.findAllById(ids);
+        int count1=ids.size();
+        int count2=vaccines.size();
+        if (count1==count2) {
+            iVaccineRepo.deleteAllById(ids);
+            return "Vaccine Deleted Successfully";
+        }
+        else {
+            return "Vaccine Not Found";
+        }
     }
 }

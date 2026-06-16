@@ -42,9 +42,13 @@ public class SpringDataJpa2Application {
 
 //        service.getVaccineById(8).ifPresent(System.out::println);
 
-        String status=service.deleteVaccineById(1);
-        System.out.println(status);
+//        String status=service.deleteVaccineById(1);
+//        System.out.println(status);
 
+        Vaccine vaccine=new Vaccine("HTH","EHY",55.5);
+        vaccine.setId(2);
+        String status = service.deleteVaccineByVaccine(vaccine);
+        System.out.println(status);
 
 
 
