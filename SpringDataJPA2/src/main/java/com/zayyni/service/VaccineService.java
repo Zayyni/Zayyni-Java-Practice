@@ -5,6 +5,8 @@ import com.zayyni.repo.IVaccineRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class VaccineService implements IVaccineService {
 
@@ -45,4 +47,10 @@ public class VaccineService implements IVaccineService {
     public Iterable<Vaccine> getAllVaccineList(Iterable<Integer> ids) {
         return iVaccineRepo.findAllById(ids);
     }
+
+    @Override
+    public Optional<Vaccine> getVaccineById(Integer id) {
+        return iVaccineRepo.findById(id);
+    }
+
 }

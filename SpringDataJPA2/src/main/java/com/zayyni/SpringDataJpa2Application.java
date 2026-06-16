@@ -37,8 +37,14 @@ public class SpringDataJpa2Application {
 
 //        service.getVaccineList().forEach(System.out::println);
 
-        List<Integer> vaccineIds= Arrays.asList(1,2,3,4);
-        service.getAllVaccineList(vaccineIds).forEach(System.out::println);
+//        List<Integer> vaccineIds= Arrays.asList(1,2,3,4);
+//        service.getAllVaccineList(vaccineIds).forEach(System.out::println);
+
+        service.getVaccineById(8).ifPresent(System.out::println);
+
+
+
+
     }
 
 }
