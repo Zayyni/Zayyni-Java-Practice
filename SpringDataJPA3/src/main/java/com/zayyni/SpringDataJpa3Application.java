@@ -15,8 +15,11 @@ public class SpringDataJpa3Application {
 //       vaccineService.fetchDetailsBySorting(true,"vaccineName","vaccineCompany")
 //               .forEach(System.out::println);
 
-        vaccineService.fetchDetailsByPagination(1, 2, true, "vaccineName")
-                .forEach(System.out::println);
+//        vaccineService.fetchDetailsByPagination(1, 2, true, "vaccineName")
+//                .forEach(System.out::println);
+
+        vaccineService.fetchDetailsByPagination(2);
+
 
 
     }
