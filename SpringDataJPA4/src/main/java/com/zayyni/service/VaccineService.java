@@ -47,5 +47,15 @@ public class VaccineService implements IVaccineService {
         return vaccineRepo.findAll(example, sort);
     }
 
+    @Override
+    public String removeVaccineInfoByIds(Iterable<Integer> ids) {
+        List<Vaccine> list = vaccineRepo.findAllById(ids);
+        if (list.size() != 0) {
+            vaccineRepo.deleteAllByIdInBatch(ids);
+            return "Vaccines deleted";
+        }
+        return "Vaccine not found";
+    }
+
 
 }

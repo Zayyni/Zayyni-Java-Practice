@@ -10,4 +10,6 @@ public interface IVaccineService {
 
     public List<Vaccine> searchVaccineByGivenInfo(Vaccine vaccine, Boolean status, String... params);
 
+    public String removeVaccineInfoByIds(Iterable<Integer> ids);
+
 }
