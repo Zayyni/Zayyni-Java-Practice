@@ -10,7 +10,7 @@ public class Module1IntroductionApplication implements CommandLineRunner {
 
     final NotificationService notificationService;
 
-    public Module1IntroductionApplication(@Qualifier("smsNotify") NotificationService notificationService) {
+    public Module1IntroductionApplication(NotificationService notificationService) {
         this.notificationService = notificationService;
     }
 
