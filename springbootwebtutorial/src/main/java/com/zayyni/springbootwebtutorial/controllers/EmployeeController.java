@@ -29,8 +29,9 @@ public class EmployeeController {
 
 
     @PostMapping
-    public String createNewEmployee(){
-        return "Hello from Post Controller";
+    public EmployeeDto createNewEmployee(@RequestBody EmployeeDto inputEmployee) {
+        inputEmployee.setId(100L);
+        return inputEmployee;
     }
 
     @PutMapping
