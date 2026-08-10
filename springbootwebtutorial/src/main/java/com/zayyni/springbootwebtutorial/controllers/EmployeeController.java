@@ -1,9 +1,12 @@
 package com.zayyni.springbootwebtutorial.controllers;
 
 import com.zayyni.springbootwebtutorial.dto.EmployeeDto;
+import com.zayyni.springbootwebtutorial.entities.EmployeeEntity;
+import com.zayyni.springbootwebtutorial.repositories.EmployeeRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/employees")
@@ -14,24 +17,28 @@ public class EmployeeController {
 //        return "Secret message : #$@&AbDF";
 //    }
 
+    private final EmployeeRepository employeeRepository;
+
+    public EmployeeController(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
+    }
+
 
     @GetMapping(path = "/{employeeId}")
-    public EmployeeDto getEmployeeById(@PathVariable(name = "employeeId") Long Id) {
-        return new EmployeeDto(Id, "Zayyni", "zayyni@gmail.com", 24, LocalDate.of(2024,1,22),true);
-
+    public EmployeeEntity getEmployeeById(@PathVariable(name = "employeeId") Long id) {
+        return employeeRepository.findById(id).orElse(null);
     }
 
     @GetMapping
-    public String getEmployees(@RequestParam(required = false) Integer age,
-                               @RequestParam(required = false) String sortBy) {
-        return "Hi age is " + age + " and sort by " + sortBy;
+    public List<EmployeeEntity> getEmployees(@RequestParam(required = false) Integer age,
+                                             @RequestParam(required = false) String sortBy) {
+       return employeeRepository.findAll();
     }
 
 
     @PostMapping
-    public EmployeeDto createNewEmployee(@RequestBody EmployeeDto inputEmployee) {
-        inputEmployee.setId(100L);
-        return inputEmployee;
+    public EmployeeEntity createNewEmployee(@RequestBody EmployeeEntity inputEmployee) {
+        return employeeRepository.save(inputEmployee);
     }
 
     @PutMapping
