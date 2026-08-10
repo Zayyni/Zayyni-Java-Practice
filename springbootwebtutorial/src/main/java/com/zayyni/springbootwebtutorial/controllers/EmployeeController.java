@@ -3,6 +3,7 @@ package com.zayyni.springbootwebtutorial.controllers;
 import com.zayyni.springbootwebtutorial.dto.EmployeeDto;
 import com.zayyni.springbootwebtutorial.entities.EmployeeEntity;
 import com.zayyni.springbootwebtutorial.repositories.EmployeeRepository;
+import com.zayyni.springbootwebtutorial.services.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -17,28 +18,28 @@ public class EmployeeController {
 //        return "Secret message : #$@&AbDF";
 //    }
 
-    private final EmployeeRepository employeeRepository;
+    private final EmployeeService employeeService;
 
-    public EmployeeController(EmployeeRepository employeeRepository) {
-        this.employeeRepository = employeeRepository;
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
     }
 
 
     @GetMapping(path = "/{employeeId}")
-    public EmployeeEntity getEmployeeById(@PathVariable(name = "employeeId") Long id) {
-        return employeeRepository.findById(id).orElse(null);
+    public EmployeeDto getEmployeeById(@PathVariable(name = "employeeId") Long id) {
+        return employeeService.getEmployeeById(id);
     }
 
     @GetMapping
-    public List<EmployeeEntity> getEmployees(@RequestParam(required = false) Integer age,
+    public List<EmployeeDto> getAllEmployees(@RequestParam(required = false) Integer age,
                                              @RequestParam(required = false) String sortBy) {
-       return employeeRepository.findAll();
+       return employeeService.getAllEmployees();
     }
 
 
     @PostMapping
-    public EmployeeEntity createNewEmployee(@RequestBody EmployeeEntity inputEmployee) {
-        return employeeRepository.save(inputEmployee);
+    public EmployeeDto createNewEmployee(@RequestBody EmployeeDto inputEmployee) {
+        return employeeService.createNewEmployee(inputEmployee);
     }
 
     @PutMapping
