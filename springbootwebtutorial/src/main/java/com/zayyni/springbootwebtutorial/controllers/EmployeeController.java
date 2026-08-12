@@ -1,6 +1,7 @@
 package com.zayyni.springbootwebtutorial.controllers;
 
 import com.zayyni.springbootwebtutorial.dto.EmployeeDto;
+import com.zayyni.springbootwebtutorial.exceptions.ResourceNotFoundException;
 import com.zayyni.springbootwebtutorial.services.EmployeeService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -31,7 +32,7 @@ public class EmployeeController {
     @GetMapping(path = "/{employeeId}")
     public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable(name = "employeeId") Long id) {
         Optional<EmployeeDto> employeeDto = employeeService.getEmployeeById(id);
-        return employeeDto.map(employeeDto1 -> ResponseEntity.ok().body(employeeDto1)).orElseThrow(NoSuchElementException::new);
+        return employeeDto.map(employeeDto1 -> ResponseEntity.ok().body(employeeDto1)).orElseThrow(() -> new ResourceNotFoundException("Employee not found"));
     }
 
     @GetMapping
