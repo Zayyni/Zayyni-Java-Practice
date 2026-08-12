@@ -2,12 +2,14 @@ package com.zayyni.springbootwebtutorial.controllers;
 
 import com.zayyni.springbootwebtutorial.dto.EmployeeDto;
 import com.zayyni.springbootwebtutorial.services.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
@@ -29,7 +31,7 @@ public class EmployeeController {
     @GetMapping(path = "/{employeeId}")
     public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable(name = "employeeId") Long id) {
         Optional<EmployeeDto> employeeDto = employeeService.getEmployeeById(id);
-        return employeeDto.map(employeeDto1 -> ResponseEntity.ok().body(employeeDto1)).orElse(ResponseEntity.notFound().build());
+        return employeeDto.map(employeeDto1 -> ResponseEntity.ok().body(employeeDto1)).orElseThrow(NoSuchElementException::new);
     }
 
     @GetMapping
@@ -40,13 +42,13 @@ public class EmployeeController {
 
 
     @PostMapping
-    public ResponseEntity<EmployeeDto> createNewEmployee(@RequestBody EmployeeDto inputEmployee) {
+    public ResponseEntity<EmployeeDto> createNewEmployee(@RequestBody @Valid EmployeeDto inputEmployee) {
         EmployeeDto employeeDto = employeeService.createNewEmployee(inputEmployee);
         return ResponseEntity.status(HttpStatus.CREATED).body(employeeDto);
     }
 
     @PutMapping(path = "/{employeeId}")
-    public ResponseEntity<EmployeeDto> updateEmployeeById(@RequestBody EmployeeDto employeeDto, @PathVariable Long employeeId) {
+    public ResponseEntity<EmployeeDto> updateEmployeeById(@RequestBody @Valid EmployeeDto employeeDto, @PathVariable Long employeeId) {
         return ResponseEntity.ok(employeeService.updateEmployeeById(employeeDto,employeeId));
     }
 
