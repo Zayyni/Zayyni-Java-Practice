@@ -40,8 +40,10 @@ class SpringJpaTutorialApplicationTests {
 //                LocalDateTime.of(2025,1,1, 0,0,0));
 //        System.out.println(list);
 
-        List<ProductEntity> entities = productRepository
-                .findByQuantityAndPrice(4,BigDecimal.valueOf(23.33));
+//        List<ProductEntity> entities = productRepository
+//                .findByQuantityAndPrice(4,BigDecimal.valueOf(23.33));
+
+        List<ProductEntity> entities = productRepository.findByTitleLike("%pep%");
         System.out.println(entities);
     }
 
