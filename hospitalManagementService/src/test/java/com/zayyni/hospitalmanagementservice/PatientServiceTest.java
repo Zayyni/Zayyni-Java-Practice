@@ -30,7 +30,7 @@ public class PatientServiceTest {
 //            System.out.println(patient);
 //        }
 
-        int rowsAffected = patientRepository.updatePatientNameWithId("Zayyni", 1L);
-        System.out.println(rowsAffected);
+//        int rowsAffected = patientRepository.updatePatientNameWithId("Zayyni", 1L);
+//        System.out.println(rowsAffected);
     }
 }
