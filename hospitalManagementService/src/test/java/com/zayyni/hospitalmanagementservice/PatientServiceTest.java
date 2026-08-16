@@ -32,5 +32,11 @@ public class PatientServiceTest {
 
 //        int rowsAffected = patientRepository.updatePatientNameWithId("Zayyni", 1L);
 //        System.out.println(rowsAffected);
+
+        List<Patient> patients = patientRepository.getAllPatientsWithAppointments();
+        for (var patient : patients){
+            System.out.println(patient);
+        }
+
     }
 }

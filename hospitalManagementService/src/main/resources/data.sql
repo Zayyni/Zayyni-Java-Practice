@@ -21,3 +21,27 @@ VALUES
     ('Anum Sheikh', 'Female', '1995-12-06', 'anum.sheikh@example.com', 'B_NEGATIVE', CURRENT_TIMESTAMP),
     ('Danish Rehman', 'Male', '1991-05-23', 'danish.rehman@example.com', 'AB_NEGATIVE', CURRENT_TIMESTAMP),
     ('Komal Arshad', 'Female', '1999-08-31', 'komal.arshad@example.com', 'O_POSITIVE', CURRENT_TIMESTAMP);
+
+
+INSERT INTO doctor (name, specialization, email)
+VALUES
+    ('Dr. Ahmed Khan', 'Cardiologist', 'ahmed.khan@hospital.com'),
+    ('Dr. Sara Malik', 'Dermatologist', 'sara.malik@hospital.com'),
+    ('Dr. Ali Hassan', 'Neurologist', 'ali.hassan@hospital.com'),
+    ('Dr. Ayesha Raza', 'Pediatrician', 'ayesha.raza@hospital.com'),
+    ('Dr. Usman Tariq', 'Orthopedic Surgeon', 'usman.tariq@hospital.com'),
+    ('Dr. Fatima Noor', 'Gynecologist', 'fatima.noor@hospital.com'),
+    ('Dr. Hamza Iqbal', 'General Physician', 'hamza.iqbal@hospital.com'),
+    ('Dr. Hira Shah', 'Ophthalmologist', 'hira.shah@hospital.com'),
+    ('Dr. Bilal Ahmed', 'ENT Specialist', 'bilal.ahmed@hospital.com'),
+    ('Dr. Maham Siddiqui', 'Psychiatrist', 'maham.siddiqui@hospital.com'),
+    ('Dr. Zain Abbas', 'Urologist', 'zain.abbas@hospital.com'),
+    ('Dr. Maryam Asif', 'Endocrinologist', 'maryam.asif@hospital.com'),
+    ('Dr. Hassan Ali', 'Pulmonologist', 'hassan.ali@hospital.com'),
+    ('Dr. Iqra Javed', 'Oncologist', 'iqra.javed@hospital.com'),
+    ('Dr. Fahad Mahmood', 'Nephrologist', 'fahad.mahmood@hospital.com'),
+    ('Dr. Laiba Yousaf', 'Rheumatologist', 'laiba.yousaf@hospital.com'),
+    ('Dr. Saad Qureshi', 'Gastroenterologist', 'saad.qureshi@hospital.com'),
+    ('Dr. Anum Sheikh', 'Radiologist', 'anum.sheikh@hospital.com'),
+    ('Dr. Danish Rehman', 'Surgeon', 'danish.rehman@hospital.com'),
+    ('Dr. Komal Arshad', 'Dentist', 'komal.arshad@hospital.com');
