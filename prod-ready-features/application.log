@@ -80,3 +80,273 @@
 2026-08-18T20:14:03.962+05:00  INFO 16828 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-08-18T20:14:03.973+05:00  INFO 16828 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-08-18T20:14:04.001+05:00  INFO 16828 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-18T22:01:14.154+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Starting ProdReadyFeaturesApplication using Java 21.0.7 with PID 3628 (D:\Telusko Java Practice\prod-ready-features\target\classes started by lenovo in D:\Telusko Java Practice\prod-ready-features)
+2026-08-18T22:01:14.157+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T22:01:14.220+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-18T22:01:14.220+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-18T22:01:15.248+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-18T22:01:15.314+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2026-08-18T22:01:16.101+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-08-18T22:01:16.116+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-18T22:01:16.116+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-18T22:01:16.165+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1944 ms
+2026-08-18T22:01:16.467+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-18T22:01:16.597+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-18T22:01:17.004+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-08-18T22:01:17.258+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-18T22:01:17.310+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-18T22:01:17.666+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2279c71c
+2026-08-18T22:01:17.669+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-18T22:01:17.828+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-18T22:01:18.233+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.zayyni.prodreadyfeatures.entities.PostEntity
+2026-08-18T22:01:19.345+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-18T22:01:19.697+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:01:20.098+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-18T22:01:20.320+05:00  WARN 3628 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-18T22:01:20.905+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-08-18T22:01:20.985+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-08-18T22:01:20.992+05:00  INFO 3628 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Started ProdReadyFeaturesApplication in 7.392 seconds (process running for 8.569)
+2026-08-18T22:01:21.364+05:00  INFO 3628 --- [prod-ready-features] [RMI TCP Connection(3)-172.24.208.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-18T22:01:21.365+05:00  INFO 3628 --- [prod-ready-features] [RMI TCP Connection(3)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-18T22:01:21.369+05:00  INFO 3628 --- [prod-ready-features] [RMI TCP Connection(3)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-08-18T22:13:04.293+05:00  INFO 3628 --- [prod-ready-features] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-18T22:13:04.301+05:00  INFO 3628 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-18T22:13:04.307+05:00  INFO 3628 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:13:04.311+05:00  INFO 3628 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-18T22:13:04.320+05:00  INFO 3628 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-18T22:13:08.863+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Starting ProdReadyFeaturesApplication using Java 21.0.7 with PID 12396 (D:\Telusko Java Practice\prod-ready-features\target\classes started by lenovo in D:\Telusko Java Practice\prod-ready-features)
+2026-08-18T22:13:08.865+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T22:13:08.947+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-18T22:13:08.948+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-18T22:13:09.824+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-18T22:13:09.878+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2026-08-18T22:13:10.645+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-08-18T22:13:10.659+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-18T22:13:10.660+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-18T22:13:10.706+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1756 ms
+2026-08-18T22:13:10.969+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-18T22:13:11.041+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-18T22:13:11.350+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-08-18T22:13:11.557+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-18T22:13:11.595+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-18T22:13:11.751+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@256a05ab
+2026-08-18T22:13:11.753+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-18T22:13:11.846+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-18T22:13:12.105+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.zayyni.prodreadyfeatures.entities.PostEntity
+2026-08-18T22:13:13.033+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-18T22:13:13.242+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:13:13.540+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-18T22:13:13.718+05:00  WARN 12396 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-18T22:13:14.310+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-08-18T22:13:14.404+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-08-18T22:13:14.414+05:00  INFO 12396 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Started ProdReadyFeaturesApplication in 6.214 seconds (process running for 7.221)
+2026-08-18T22:13:15.042+05:00  INFO 12396 --- [prod-ready-features] [RMI TCP Connection(2)-172.24.208.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-18T22:13:15.043+05:00  INFO 12396 --- [prod-ready-features] [RMI TCP Connection(2)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-18T22:13:15.046+05:00  INFO 12396 --- [prod-ready-features] [RMI TCP Connection(2)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-18T22:22:59.787+05:00  INFO 12396 --- [prod-ready-features] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-18T22:22:59.794+05:00  INFO 12396 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-18T22:22:59.801+05:00  INFO 12396 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:22:59.805+05:00  INFO 12396 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-18T22:22:59.811+05:00  INFO 12396 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-18T22:23:02.483+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Starting ProdReadyFeaturesApplication using Java 21.0.7 with PID 2784 (D:\Telusko Java Practice\prod-ready-features\target\classes started by lenovo in D:\Telusko Java Practice\prod-ready-features)
+2026-08-18T22:23:02.486+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T22:23:02.531+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-18T22:23:02.531+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-18T22:23:03.373+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-18T22:23:03.425+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2026-08-18T22:23:04.096+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-08-18T22:23:04.111+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-18T22:23:04.160+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-18T22:23:04.205+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1674 ms
+2026-08-18T22:23:04.455+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-18T22:23:04.519+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-18T22:23:04.811+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-08-18T22:23:05.006+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-18T22:23:05.044+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-18T22:23:05.203+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72285da3
+2026-08-18T22:23:05.205+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-18T22:23:05.298+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-18T22:23:05.539+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.zayyni.prodreadyfeatures.entities.PostEntity
+2026-08-18T22:23:06.402+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-18T22:23:06.568+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:23:06.837+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-18T22:23:07.009+05:00  WARN 2784 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-18T22:23:07.532+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-08-18T22:23:07.611+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-08-18T22:23:07.618+05:00  INFO 2784 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Started ProdReadyFeaturesApplication in 5.639 seconds (process running for 6.47)
+2026-08-18T22:23:07.937+05:00  INFO 2784 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-18T22:23:07.937+05:00  INFO 2784 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-18T22:23:07.940+05:00  INFO 2784 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-18T22:24:29.212+05:00  INFO 2784 --- [prod-ready-features] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-18T22:24:29.218+05:00  INFO 2784 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-18T22:24:29.225+05:00  INFO 2784 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:24:29.228+05:00  INFO 2784 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-18T22:24:29.234+05:00  INFO 2784 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-18T22:24:32.890+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Starting ProdReadyFeaturesApplication using Java 21.0.7 with PID 10672 (D:\Telusko Java Practice\prod-ready-features\target\classes started by lenovo in D:\Telusko Java Practice\prod-ready-features)
+2026-08-18T22:24:32.893+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T22:24:32.937+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-18T22:24:32.938+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-18T22:24:33.806+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-18T22:24:33.860+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-08-18T22:24:34.655+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-08-18T22:24:34.672+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-18T22:24:34.673+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-18T22:24:34.729+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1791 ms
+2026-08-18T22:24:35.045+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-18T22:24:35.133+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-18T22:24:35.502+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-08-18T22:24:35.751+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-18T22:24:35.802+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-18T22:24:36.023+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@546fa8c5
+2026-08-18T22:24:36.025+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-18T22:24:36.137+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-18T22:24:36.454+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.zayyni.prodreadyfeatures.entities.PostEntity
+2026-08-18T22:24:37.526+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-18T22:24:37.774+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:24:38.087+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-18T22:24:38.285+05:00  WARN 10672 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-18T22:24:38.967+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-08-18T22:24:39.082+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-08-18T22:24:39.090+05:00  INFO 10672 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Started ProdReadyFeaturesApplication in 6.767 seconds (process running for 8.087)
+2026-08-18T22:24:39.503+05:00  INFO 10672 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-18T22:24:39.504+05:00  INFO 10672 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-18T22:24:39.507+05:00  INFO 10672 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-18T22:26:16.178+05:00  INFO 10672 --- [prod-ready-features] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-18T22:26:16.185+05:00  INFO 10672 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-18T22:26:16.192+05:00  INFO 10672 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:26:16.197+05:00  INFO 10672 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-18T22:26:16.206+05:00  INFO 10672 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-18T22:26:20.339+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Starting ProdReadyFeaturesApplication using Java 21.0.7 with PID 12092 (D:\Telusko Java Practice\prod-ready-features\target\classes started by lenovo in D:\Telusko Java Practice\prod-ready-features)
+2026-08-18T22:26:20.347+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T22:26:20.449+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-18T22:26:20.450+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-18T22:26:21.934+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-18T22:26:22.024+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
+2026-08-18T22:26:23.143+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-08-18T22:26:23.160+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-18T22:26:23.161+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-18T22:26:23.211+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2760 ms
+2026-08-18T22:26:23.502+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-18T22:26:23.594+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-18T22:26:24.114+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-08-18T22:26:24.340+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-18T22:26:24.381+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-18T22:26:24.552+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cee9101
+2026-08-18T22:26:24.555+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-18T22:26:24.649+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-18T22:26:24.926+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.zayyni.prodreadyfeatures.entities.PostEntity
+2026-08-18T22:26:25.942+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-18T22:26:26.205+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:26:26.499+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-18T22:26:26.712+05:00  WARN 12092 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-18T22:26:27.280+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-08-18T22:26:27.377+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-08-18T22:26:27.387+05:00  INFO 12092 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Started ProdReadyFeaturesApplication in 7.922 seconds (process running for 9.391)
+2026-08-18T22:26:27.944+05:00  INFO 12092 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-18T22:26:27.945+05:00  INFO 12092 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-18T22:26:27.947+05:00  INFO 12092 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-18T22:28:01.426+05:00  INFO 12092 --- [prod-ready-features] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-18T22:28:01.444+05:00  INFO 12092 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-18T22:28:01.451+05:00  INFO 12092 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:28:01.455+05:00  INFO 12092 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-18T22:28:01.464+05:00  INFO 12092 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-18T22:28:05.001+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Starting ProdReadyFeaturesApplication using Java 21.0.7 with PID 16572 (D:\Telusko Java Practice\prod-ready-features\target\classes started by lenovo in D:\Telusko Java Practice\prod-ready-features)
+2026-08-18T22:28:05.005+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-18T22:28:05.054+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-18T22:28:05.055+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-18T22:28:05.929+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-18T22:28:05.984+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2026-08-18T22:28:06.668+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9000 (http)
+2026-08-18T22:28:06.684+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-18T22:28:06.684+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-18T22:28:06.732+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1677 ms
+2026-08-18T22:28:06.999+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-18T22:28:07.066+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-18T22:28:07.371+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2026-08-18T22:28:07.577+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-18T22:28:07.614+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-18T22:28:07.775+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bcf917c
+2026-08-18T22:28:07.777+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-18T22:28:07.913+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/prod-ready-features?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.43
+	Default catalog/schema: prod-ready-features/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-18T22:28:08.161+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.zayyni.prodreadyfeatures.entities.PostEntity
+2026-08-18T22:28:09.076+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-18T22:28:09.304+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T22:28:09.582+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-18T22:28:09.765+05:00  WARN 16572 --- [prod-ready-features] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-18T22:28:10.300+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-08-18T22:28:10.384+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9000 (http) with context path '/'
+2026-08-18T22:28:10.392+05:00  INFO 16572 --- [prod-ready-features] [restartedMain] c.z.p.ProdReadyFeaturesApplication       : Started ProdReadyFeaturesApplication in 5.864 seconds (process running for 6.861)
+2026-08-18T22:28:10.936+05:00  INFO 16572 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-18T22:28:10.937+05:00  INFO 16572 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-18T22:28:10.940+05:00  INFO 16572 --- [prod-ready-features] [RMI TCP Connection(4)-172.24.208.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-18T23:04:54.073+05:00  INFO 16572 --- [prod-ready-features] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-18T23:04:54.081+05:00  INFO 16572 --- [prod-ready-features] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-18T23:04:54.087+05:00  INFO 16572 --- [prod-ready-features] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-18T23:04:54.093+05:00  INFO 16572 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-18T23:04:54.096+05:00  INFO 16572 --- [prod-ready-features] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
