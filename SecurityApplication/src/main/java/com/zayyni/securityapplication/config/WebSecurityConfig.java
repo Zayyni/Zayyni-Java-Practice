@@ -23,7 +23,7 @@ public class WebSecurityConfig {
         httpSecurity
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/posts").permitAll()
+                                .requestMatchers("/posts","/auth/**").permitAll()
                                 .requestMatchers("/posts/**").hasAnyRole( "ADMIN")
                                 .anyRequest()
                                 .authenticated())
@@ -35,23 +35,23 @@ public class WebSecurityConfig {
         return httpSecurity.build();
     }
 
-    @Bean
-    UserDetailsService myInMemoryUserDetailsService() {
-        UserDetails normalUser = User
-                .withUsername("zayyni")
-                .password(passwordEncoder().encode("pass123"))
-                .roles("USER")
-                 .build();
-
-        UserDetails adminUser = User
-                .withUsername("admin")
-                .password(passwordEncoder().encode("admin123"))
-                .roles("ADMIN")
-                .build();
-
-        return new InMemoryUserDetailsManager(normalUser, adminUser);
-
-    }
+//    @Bean
+//    UserDetailsService myInMemoryUserDetailsService() {
+//        UserDetails normalUser = User
+//                .withUsername("zayyni")
+//                .password(passwordEncoder().encode("pass123"))
+//                .roles("USER")
+//                 .build();
+//
+//        UserDetails adminUser = User
+//                .withUsername("admin")
+//                .password(passwordEncoder().encode("admin123"))
+//                .roles("ADMIN")
+//                .build();
+//
+//        return new InMemoryUserDetailsManager(normalUser, adminUser);
+//
+//    }
 
     @Bean
     PasswordEncoder passwordEncoder() {
