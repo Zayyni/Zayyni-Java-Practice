@@ -1,5 +1,6 @@
 package com.zayyni.securityapplication.config;
 
+import com.zayyni.securityapplication.entities.enums.Permission;
 import com.zayyni.securityapplication.filters.JwtAuthFilter;
 import com.zayyni.securityapplication.handlers.OAuth2SuccessHandler;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import static com.zayyni.securityapplication.entities.enums.Permission.*;
 import static com.zayyni.securityapplication.entities.enums.Role.ADMIN;
 import static com.zayyni.securityapplication.entities.enums.Role.CREATOR;
 
@@ -45,6 +47,14 @@ public class WebSecurityConfig {
                                 .requestMatchers(HttpMethod.GET,"/posts/**").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/posts/**")
                                 .hasAnyRole(ADMIN.name(),CREATOR.name())
+                                .requestMatchers(HttpMethod.POST,"/posts/**")
+                                    .hasAnyAuthority(POST_CREATE.name())
+                                .requestMatchers(HttpMethod.GET,"/posts/**")
+                                    .hasAuthority(POST_VIEW.name())
+                                .requestMatchers(HttpMethod.PUT,"/posts/**")
+                                .hasAuthority(POST_UPDATE.name())
+                                .requestMatchers(HttpMethod.DELETE,"/posts/**")
+                                .hasAuthority(POST_DELETE.name())
                                 .anyRequest()
                                 .authenticated())
                 .csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable())
