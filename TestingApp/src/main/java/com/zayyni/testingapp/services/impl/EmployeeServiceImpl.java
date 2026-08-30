@@ -51,6 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new RuntimeException("Employee with email " + employeeDto.getEmail() + " does not exist");
         }
         employee.setEmail(employeeDto.getEmail());
+        employee.setId(id);
         return modelMapper.map(employeeRepository.save(employee), EmployeeDto.class);
     }
 
