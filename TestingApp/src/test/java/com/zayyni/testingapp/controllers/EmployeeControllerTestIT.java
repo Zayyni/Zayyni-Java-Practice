@@ -16,25 +16,9 @@ class EmployeeControllerTestIT extends AbstractIntegrationTest {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    private Employee testEmployee;
-
-    private EmployeeDto testEmployeeDto;
-
     @BeforeEach
     void setUp() {
-        testEmployee = Employee.builder()
-                .id(1L)
-                .name("John")
-                .email("john@example.com")
-                .salary(25115.77)
-                .build();
 
-        testEmployeeDto = EmployeeDto.builder()
-                .id(1L)
-                .name("John")
-                .email("john@example.com")
-                .salary(25115.77)
-                .build();
 
         employeeRepository.deleteAll();
     }

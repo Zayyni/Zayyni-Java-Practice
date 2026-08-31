@@ -1,6 +1,8 @@
 package com.zayyni.testingapp.controllers;
 
 import com.zayyni.testingapp.TestContainerConfiguration;
+import com.zayyni.testingapp.dto.EmployeeDto;
+import com.zayyni.testingapp.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webtestclient.autoconfigure.AutoConfigureWebTestClient;
@@ -15,4 +17,19 @@ public class AbstractIntegrationTest {
 
     @Autowired
     WebTestClient webTestClient;
+
+
+    Employee testEmployee = Employee.builder()
+            .id(1L)
+                .name("John")
+                .email("john@example.com")
+                .salary(25115.77)
+                .build();
+
+    EmployeeDto testEmployeeDto = EmployeeDto.builder()
+            .id(1L)
+                .name("John")
+                .email("john@example.com")
+                .salary(25115.77)
+                .build();
 }
