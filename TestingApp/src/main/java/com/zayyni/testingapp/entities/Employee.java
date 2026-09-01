@@ -18,4 +18,7 @@ public class Employee {
     private double salary;
     @Column(unique = true)
     private String email;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Department department;
 }
