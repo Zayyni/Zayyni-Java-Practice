@@ -1,0 +1,43 @@
+package com.zayyni.learnspringai.service;
+
+import com.zayyni.learnspringai.dto.Joke;
+import lombok.RequiredArgsConstructor;
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
+import org.springframework.ai.chat.prompt.PromptTemplate;
+import org.springframework.stereotype.Service;
+
+import java.util.Map;
+import java.util.Objects;
+
+@Service
+@RequiredArgsConstructor
+public class AIService {
+
+    private final ChatClient chatClient;
+
+
+    public String getJoke(String topic){
+
+
+        String systemPrompt = """
+            You are a sarcastic joker, give response in 4 line only.
+            You don't make jokes about politics.
+            Give a joke on the topic: {topic}
+            """;
+
+        PromptTemplate promptTemplate = new PromptTemplate(systemPrompt);
+        String renderedText = promptTemplate.render(Map.of("topic", topic));
+
+
+        var response = chatClient.prompt()
+                .user(renderedText)
+                .advisors(
+                        new SimpleLoggerAdvisor()
+                )
+                .call()
+                .entity(Joke.class);
+
+        return response.text();
+        }
+}
