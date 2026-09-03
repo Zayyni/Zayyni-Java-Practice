@@ -8,6 +8,9 @@ spring:
       chat:
         options:
           model: qwen3:0.6b
+      embedding:
+          options:
+            model: nomic-embed-text:v1.5
 
     openai:
       api-key:
@@ -16,6 +19,15 @@ spring:
           model: gpt-4
           temperture: 0.9
 
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/my-test-vector-db
+    username: my-user
+    password: password
+    driver-class-name: org.postgresql.Driver
 
 logging:
   level:
