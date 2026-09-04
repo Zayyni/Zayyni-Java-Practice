@@ -18,7 +18,7 @@ public class RAGServiceTests {
 
     @Test
     public void testAskAI() {
-        var response = ragService.askAI("who is best Java developer?");
+        var response = ragService.askAI("Maecenas tincidunt est efficitur ligula euismod");
         System.out.println(response);
     }
 

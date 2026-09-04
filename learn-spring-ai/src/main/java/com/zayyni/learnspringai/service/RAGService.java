@@ -49,9 +49,9 @@ public class RAGService {
 
         List<Document> documents = vectorStore.similaritySearch(SearchRequest.builder()
                 .query(question)
-                .topK(2)
-                .similarityThreshold(0.5)
-                .filterExpression("topic == 'Vector Store' or ai == 'Spring AI'")
+                .topK(4)
+                .similarityThreshold(0.4)
+                .filterExpression("file_name == '" + samplePdf.getFilename() + "'")
                 .build());
 
         String context = documents.stream()
