@@ -22,4 +22,11 @@ public class RAGServiceTests {
         System.out.println(response);
     }
 
+
+    @Test
+    public void testAskAIWithAdvisors() {
+        var response = ragService.askAIWithAdvisors("Can you tell me where is Lahore city and also my name is Zayyni","zayyni");
+        System.out.println(response);
+    }
+
 }
