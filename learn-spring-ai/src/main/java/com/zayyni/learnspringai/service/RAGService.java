@@ -1,5 +1,6 @@
 package com.zayyni.learnspringai.service;
 
+import com.zayyni.learnspringai.advisor.TokenUsageAdvisor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
@@ -58,8 +59,9 @@ public class RAGService {
                                         .filterExpression("file_name == 'sample.pdf'")
                                         .topK(4)
                                         .build())
-                                .build()
+                                .build(),
 
+                        new TokenUsageAdvisor()
 
                         )
                 .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, userId))

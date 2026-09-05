@@ -1,0 +1,55 @@
+package com.zayyni.learnspringai.advisor;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.ai.chat.client.ChatClientRequest;
+import org.springframework.ai.chat.client.ChatClientResponse;
+import org.springframework.ai.chat.client.advisor.api.CallAdvisor;
+import org.springframework.ai.chat.client.advisor.api.CallAdvisorChain;
+import org.springframework.ai.chat.model.ChatResponse;
+
+@Slf4j
+public class TokenUsageAdvisor implements CallAdvisor {
+
+    @Override
+    public ChatClientResponse adviseCall(ChatClientRequest chatClientRequest, CallAdvisorChain callAdvisorChain) {
+
+        long startTime = System.currentTimeMillis();
+
+        // request phase
+
+        //1. Pass the request down the chain (to the LLM)
+        ChatClientResponse advisedResponse = callAdvisorChain.nextCall(chatClientRequest);
+
+        //2. Extract the actual LLM response
+        ChatResponse chatResponse = advisedResponse.chatResponse();
+
+        //3. Inspect Usage Metadata
+
+        if (chatResponse != null) {
+            chatResponse.getMetadata().getUsage();
+            var usage = chatResponse.getMetadata().getUsage();
+            long duration = System.currentTimeMillis() - startTime;
+
+            log.info("Toke Usage : Input={} | Output={} | Total={} | Time={}ms",
+                    usage.getPromptTokens(),
+                    usage.getCompletionTokens(),
+                    usage.getTotalTokens(),
+                    duration
+            );
+
+            // make to db call to store the token used by the user
+        }
+
+        return advisedResponse;
+    }
+
+    @Override
+    public String getName() {
+        return "ChatClientResponse";
+    }
+
+    @Override
+    public int getOrder() {
+        return 0;
+    }
+}
