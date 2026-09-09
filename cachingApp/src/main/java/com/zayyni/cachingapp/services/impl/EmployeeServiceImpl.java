@@ -8,6 +8,7 @@ import com.zayyni.cachingapp.services.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -74,6 +75,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    @CacheEvict(cacheNames = CACHE_NAME, key = "#id")
     public void deleteEmployee(Long id) {
         log.info("Deleting employee: {}", id);
         boolean exists = employeeRepository.existsById(id);
