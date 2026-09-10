@@ -86,4 +86,5 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.deleteById(id);
         log.info("Employee deleted: {}", id);
     }
+    //Learning DB ACID Properties
 }
