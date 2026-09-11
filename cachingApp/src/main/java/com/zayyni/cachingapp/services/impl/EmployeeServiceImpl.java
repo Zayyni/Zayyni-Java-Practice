@@ -87,4 +87,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         log.info("Employee deleted: {}", id);
     }
     //Learning DB ACID Properties
+
+    // Learning db isolation levels
+    
 }
