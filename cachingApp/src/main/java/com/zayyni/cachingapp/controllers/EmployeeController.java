@@ -1,11 +1,15 @@
 package com.zayyni.cachingapp.controllers;
 
 import com.zayyni.cachingapp.dto.EmployeeDto;
+import com.zayyni.cachingapp.entities.SalaryAccount;
 import com.zayyni.cachingapp.services.EmployeeService;
+import com.zayyni.cachingapp.services.SalaryAccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 @RestController
 @RequestMapping("/employees")
@@ -13,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
+    private final SalaryAccountService salaryAccountService;
 
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDto> getEmployee(@PathVariable Long id) {
@@ -39,9 +44,12 @@ public class EmployeeController {
     }
 
 
+    @PutMapping("/incrementBalance/{accountId}")
+    public ResponseEntity<SalaryAccount> incrementBalance(@PathVariable Long accountId) {
+        SalaryAccount salaryAccount = salaryAccountService.incrementBalance(accountId);
+        return new ResponseEntity<>(salaryAccount, HttpStatus.OK);
 
-
-
+    }
 
 
 }

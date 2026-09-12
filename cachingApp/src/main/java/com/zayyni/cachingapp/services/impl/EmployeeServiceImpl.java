@@ -5,6 +5,7 @@ import com.zayyni.cachingapp.entities.Employee;
 import com.zayyni.cachingapp.exceptions.ResourceNotFoundException;
 import com.zayyni.cachingapp.repositories.EmployeeRepository;
 import com.zayyni.cachingapp.services.EmployeeService;
+import com.zayyni.cachingapp.services.SalaryAccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -12,6 +13,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,6 +24,7 @@ import java.util.Optional;
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+    private final SalaryAccountService salaryAccountService;
     private final ModelMapper modelMapper;
     private final String CACHE_NAME = "employees";
 
@@ -38,6 +41,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     @CachePut(cacheNames = CACHE_NAME, key = "#result.id")
+    @Transactional
     public EmployeeDto createNewEmployee(EmployeeDto employeeDto) {
         log.info("Creating new employee: {}", employeeDto.getEmail());
         List<Employee> existingEmployees = employeeRepository.findByEmail(employeeDto.getEmail());
@@ -48,6 +52,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         Employee employee = modelMapper.map(employeeDto, Employee.class);
         employee = employeeRepository.save(employee);
+
+        salaryAccountService.createAccount(employee);
+
+
         log.info("New employee created: {}", employeeDto.getEmail());
         return modelMapper.map(employee, EmployeeDto.class);
 
@@ -89,5 +97,5 @@ public class EmployeeServiceImpl implements EmployeeService {
     //Learning DB ACID Properties
 
     // Learning db isolation levels
-    
+
 }
