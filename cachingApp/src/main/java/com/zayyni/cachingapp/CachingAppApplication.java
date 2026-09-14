@@ -10,4 +10,5 @@ public class CachingAppApplication {
         SpringApplication.run(CachingAppApplication.class, args);
     }
 
+    //learning about the microservices architecture
 }
