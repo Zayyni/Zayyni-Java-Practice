@@ -10,5 +10,6 @@ public class CachingAppApplication {
         SpringApplication.run(CachingAppApplication.class, args);
     }
 
-    //learning about the microservices architecture
+    //learning about the microservices architecture paused for now
+//    started the kafka now
 }
