@@ -12,4 +12,5 @@ public class CachingAppApplication {
 
     //learning about the microservices architecture paused for now
 //    started the kafka now
+    //learning kafka interview questions
 }
